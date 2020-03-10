@@ -17,7 +17,7 @@ async function connectDatabase() {
 async function seedDatabase() {
   try {
     await User.collection.drop();
-  } catch {
+  } catch (error) {
     console.log('user collection already dropped');
   }
   
